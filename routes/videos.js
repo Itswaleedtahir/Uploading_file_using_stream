@@ -5,6 +5,7 @@ const fs = require('fs');
 const path = require('path'); // Add this line
 const { Video } = require('../models');
 
+//Using multer storage 
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
