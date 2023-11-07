@@ -27,7 +27,6 @@ router.post('/upload', upload.single('video'), async (req, res) => {
       return;
     }
   }
-  console.log(filePath)
   // Stream the file data to the local filesystem
   
   const fileStream = fs.createWriteStream(filePath);
