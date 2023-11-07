@@ -17,7 +17,7 @@ router.post('/upload', upload.single('video'), async (req, res) => {
   const uploadDirectory = path.join(__dirname, '../uploads'); // Use path.join for cross-platform compatibility
   const filePath = path.join(uploadDirectory, req.file.originalname);
 
-  // Ensure the 'uploads' directory exists
+  // Ensure the uploads directory exists
   if (!fs.existsSync(uploadDirectory)) {
     try {
       fs.mkdirSync(uploadDirectory, { recursive: true });
