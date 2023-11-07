@@ -61,6 +61,4 @@ router.get('/video', async (req, res) => {
     res.status(500).json({ message: 'Error fetching videos' });
   }
 });
-// Implement other video-related routes here
-
 module.exports = router;
