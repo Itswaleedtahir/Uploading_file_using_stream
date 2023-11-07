@@ -9,6 +9,7 @@ const { Video } = require('../models');
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
+//Post route
 router.post('/upload', upload.single('video'), async (req, res) => {
   const { title, description, userId } = req.body;
   const fileData = req.file.buffer;
