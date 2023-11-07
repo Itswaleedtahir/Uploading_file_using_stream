@@ -28,7 +28,6 @@ router.post('/upload', upload.single('video'), async (req, res) => {
     }
   }
   // Stream the file data to the local filesystem
-  
   const fileStream = fs.createWriteStream(filePath);
   fileStream.write(fileData);
   // Store metadata in the database
