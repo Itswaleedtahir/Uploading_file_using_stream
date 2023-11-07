@@ -48,6 +48,7 @@ router.post('/upload', upload.single('video'), async (req, res) => {
   res.status(201).json({ message: 'Video uploaded successfully' });
 });
 
+//Get Route
 router.get('/video', async (req, res) => {
   try {
     // Fetch all videos from the database
